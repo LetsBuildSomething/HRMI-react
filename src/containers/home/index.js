@@ -15,16 +15,16 @@ const Home = props => (
     <p>Count: {props.count}</p>
 
     <p>
-      <button onClick={props.increment} disabled={props.isIncrementing}>Increment</button>
-      <button onClick={props.incrementAsync} disabled={props.isIncrementing}>Increment Async</button>
+      <button className="btn btn-primary" onClick={props.increment} disabled={props.isIncrementing}>Increment</button>
+      <button className="btn btn-primary" onClick={props.incrementAsync} disabled={props.isIncrementing}>Increment Async</button>
     </p>
 
     <p>
-      <button onClick={props.decrement} disabled={props.isDecrementing}>Decrementing</button>
-      <button onClick={props.decrementAsync} disabled={props.isDecrementing}>Decrement Async</button>
+      <button className="btn btn-primary" onClick={props.decrement} disabled={props.isDecrementing}>Decrementing</button>
+      <button className="btn btn-primary" onClick={props.decrementAsync} disabled={props.isDecrementing}>Decrement Async</button>
     </p>
 
-    <p><button onClick={() => props.changePage()}>Go to about page via redux</button></p>
+    <p><button className="btn btn-primary" onClick={() => props.changePage()}>Go to about page via redux</button></p>
   </div>
 )
 
@@ -39,7 +39,7 @@ const mapDispatchToProps = dispatch => bindActionCreators({
   incrementAsync,
   decrement,
   decrementAsync,
-  changePage: () => push('/about-us')
+  changePage: () => push('/about')
 }, dispatch)
 
 export default connect(
