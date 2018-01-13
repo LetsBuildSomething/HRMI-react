@@ -5,12 +5,11 @@ import { ConnectedRouter } from 'react-router-redux'
 import store, { history } from './store'
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 
-import Home from './containers/home'
-import About from './containers/about'
-import LogIn from './containers/LogIn'
-import Register from './containers/Register'
-import Header from './containers/Header'
-import App from './components/app'
+import Home from './views/home'
+import About from './views/about'
+import LogIn from './views/login'
+import Register from './views/register'
+import App from './views/app'
 
 const target = document.querySelector('#root')
 
