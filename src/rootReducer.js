@@ -1,11 +1,10 @@
 import {combineReducers} from 'redux';
-import courses from './courseReducer';
-import authors from './authorReducer';
+import videoReducer from './components/video/reducer';
 
 const rootReducer = combineReducers({
-  courses : courses,
+  video : videoReducer,
   // can just use 'courses'  -> Shorthand property name
-  authors : authors
+  //authors : authors
 });
 
 export default rootReducer;

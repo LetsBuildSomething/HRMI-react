@@ -9,25 +9,15 @@ import {
   decrementAsync
 } from '../../modules/counter'
 
+import VideoComponent from '../../components/video'
+
 const Home = props => (
   <div>
     <h1>Home</h1>
-    <p>Count: {props.count}</p>
-
-    <p>
-      <button className="btn btn-primary" onClick={props.increment} disabled={props.isIncrementing}>Increment</button>
-      <button className="btn btn-primary" onClick={props.incrementAsync} disabled={props.isIncrementing}>Increment Async</button>
-    </p>
-
-    <p>
-      <button className="btn btn-primary" onClick={props.decrement} disabled={props.isDecrementing}>Decrementing</button>
-      <button className="btn btn-primary" onClick={props.decrementAsync} disabled={props.isDecrementing}>Decrement Async</button>
-    </p>
-
-    <p><button className="btn btn-primary" onClick={() => props.changePage()}>Go to about page via redux</button></p>
+    <VideoComponent>   </VideoComponent>
   </div>
 )
-
+/*
 const mapStateToProps = state => ({
   count: state.counter.count,
   isIncrementing: state.counter.isIncrementing,
@@ -42,7 +32,5 @@ const mapDispatchToProps = dispatch => bindActionCreators({
   changePage: () => push('/about')
 }, dispatch)
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Home)
+*/
+export default Home
